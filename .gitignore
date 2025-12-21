@@ -1,6 +1,12 @@
 # dependencies
 node_modules/
 
+# build outputs
+.next/
+out/
+dist/
+.turbo/
+
 # environment variables
 .env
 .env.*
@@ -20,3 +26,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+
+# test coverage
+coverage/
