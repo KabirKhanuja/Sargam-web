@@ -6,6 +6,8 @@ import cors from "cors";
 import { connectDB } from "./db/mongo";
 import { env } from "./config/env";
 import healthRoutes from "./routes/health.routes";
+import sessionRoutes from "./routes/session.routes";
+
 
 const app = express();
 
@@ -19,3 +21,6 @@ connectDB();
 app.listen(env.PORT, () => {
   console.log(`API running on port ${env.PORT}`);
 });
+
+
+app.use("/sessions", sessionRoutes);
